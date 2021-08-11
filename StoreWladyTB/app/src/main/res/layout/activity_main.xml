@@ -111,16 +111,6 @@
                 android:paddingLeft="5dp"
                 android:paddingVertical="15dp"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transaccion:"
-                android:textSize="20dp"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/white"
-                android:paddingLeft="5dp"
-                android:paddingVertical="15dp"
-                />
         </LinearLayout>
     <LinearLayout
         android:id="@+id/boxRight"
@@ -228,20 +218,6 @@
             android:layout_marginRight="10dp"
             android:paddingVertical="15dp"
             />
-        <EditText
-            android:id="@+id/txtTransaccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="20dp"
-            android:hint=""
-            android:backgroundTint="#009C8C"
-            android:textColor="@color/white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:paddingVertical="15dp"
-            />
     </LinearLayout>
     </LinearLayout>
 
@@ -276,6 +252,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textSize="30dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

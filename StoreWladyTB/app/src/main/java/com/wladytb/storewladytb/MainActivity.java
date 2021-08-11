@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     String url;
     TextView txt;
     Button btn;
-    EditText txtCodigo, txtCell, txtCedula, txtReferencia, txtValorConIva, txtValorSinIva, txtImpuesto, txtTransaccion;
+    EditText txtCodigo, txtCell, txtCedula, txtReferencia, txtValorConIva, txtValorSinIva, txtImpuesto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         txtValorConIva = (EditText) findViewById(R.id.txtValorConIva);
         txtValorSinIva = (EditText) findViewById(R.id.txtValorSinIva);
         txtImpuesto = (EditText) findViewById(R.id.txtImpuesto);
-        txtTransaccion = (EditText) findViewById(R.id.txtTransaccion);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +95,11 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             System.out.println(response);
-                            txt.append(response.toString());
+                            try {
+                                txt.append("transactionId: "+ response.getString("transactionId"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }, new Response.ErrorListener() {
                 @Override
